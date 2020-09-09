@@ -2,9 +2,9 @@
         "name": "Classic 10g's",
         "price": "150",
         "id": "1",
-        "url": "",
+        "url": "products.json",
         "description": "The piña colada is a sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice",
-        "image": "https://bandz.virtualai.co.za"
+        "image": ""
     },
     {
         "name": "Bluedream 1g",
