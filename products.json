@@ -4,13 +4,13 @@
         "id": "1",
         "url": "",
         "description": "The piña colada is a sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice",
-        "image": ""
+        "image": "https://bandz.virtualai.co.za/#"
     },
     {
         "name": "Bluedream 1g",
         "price": "9.00",
         "id": "2",
-        "url": "",
+        "url": "https://bandz.virtualai.co.za/#",
         "description": "The margarita is a cocktail made with tequila and citrus fruit juice.",
         "image": ""
     },
@@ -18,7 +18,7 @@
         "name": "Girl Scout Cookies 1g",
         "price": "5.00",
         "id": "3",
-        "url": "",
+        "url": "https://bandz.virtualai.co.za/#",
         "description": "You know what beer",
         "image": ""
     },
@@ -26,7 +26,7 @@
         "name": "Huckleberry 1g",
         "price": "5.00",
         "id": "4",
-        "url": "",
+        "url": "https://bandz.virtualai.co.za/#",
         "description": "You know what",
         "image": ""
     },
@@ -34,7 +34,7 @@
         "name": "Outdoor Jays 10's",
         "price": "5.00",
         "id": "5",
-        "url": "",
+        "url": "https://bandz.virtualai.co.za/#",
         "description": "You kno",
         "image": ""
     },
@@ -42,7 +42,7 @@
         "name": "Silver Jays 10's",
         "price": "5.00",
         "id": "6",
-        "url": "",
+        "url": "https://bandz.virtualai.co.za/#",
         "description": "Yo",
         "image": ""
     }
