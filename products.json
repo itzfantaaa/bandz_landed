@@ -1,0 +1,49 @@
+[{
+        "name": "Classic 10g's",
+        "price": "150",
+        "id": "1",
+        "url": "",
+        "description": "The piña colada is a sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice",
+        "image": ""
+    },
+    {
+        "name": "Bluedream 1g",
+        "price": "9.00",
+        "id": "2",
+        "url": "",
+        "description": "The margarita is a cocktail made with tequila and citrus fruit juice.",
+        "image": ""
+    },
+    {
+        "name": "Girl Scout Cookies 1g",
+        "price": "5.00",
+        "id": "3",
+        "url": "",
+        "description": "You know what beer",
+        "image": ""
+    },
+    {
+        "name": "Huckleberry 1g",
+        "price": "5.00",
+        "id": "4",
+        "url": "",
+        "description": "You know what",
+        "image": ""
+    },
+    {
+        "name": "Outdoor Jays 10's",
+        "price": "5.00",
+        "id": "5",
+        "url": "",
+        "description": "You kno",
+        "image": ""
+    },
+    {
+        "name": "Silver Jays 10's",
+        "price": "5.00",
+        "id": "6",
+        "url": "",
+        "description": "Yo",
+        "image": ""
+    }
+]

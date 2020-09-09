@@ -11,6 +11,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.css" />
+</head>
+
 </head>
 
 <body class="is-preload">
@@ -33,34 +38,22 @@
     <!-- One -->
     <section id="one" class="main special">
         <div class="container">
-            <!-- <span class="image fit primary"><img src="images/pic01.jpg" alt="" /></span> -->
-            <div class="content">
-                <h3 class="major" id="out">Outdoor</h3>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Classic 10g's</td>
-                                <td>150</td>
-                                <td>
-                                    <ul class="icons" onclick="changeContent_11()">
-                                        <li><a href="#0" class="icon solid fa-cart-plus "><span class="label ">Twitter</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                    <!-- <textarea name="demo-message " id="confirm_msg_test" placeholder="Add something to the cart." rows="2 "></textarea> -->
-
-                </div>
+            <h3 class="major">Table</h3>
+            <div class="table-wrapper">
+                <table id="product_table">
+                    <tr>
+                        <th>name</th>
+                        <th>price</th>
+                        <!-- <th>id</th>
+                                <th>url</th> -->
+                        <th>description</th>
+                        <!-- <th>image</th> -->
+                        <!-- <th>Add2bag</th> -->
+                    </tr>
+                </table>
+                <button class="snipcart-add-item" data-item-id="6" data-item-price="5.00" data-item-url="" data-item-description="Yo" data-item-image="" data-item-name="Silver Jays 10's"> Silver Jays 10's </button>
+                <span class="snipcart-items-count"></span>
+                <span class="snipcart-total-price"></span>
             </div>
             <a href="#two" class="goto-next scrolly ">Next</a>
         </div>
@@ -248,6 +241,40 @@
     <script src="assets/js/breakpoints.min.js "></script>
     <script src="assets/js/util.js "></script>
     <script src="assets/js/main.js "></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.getJSON("products.json", function(data) {
+                var product_data = [];
+                $.each(data, function(key, value) {
+                    product_data.push('<tr>');
+                    product_data.push('<td>' + value.name + '</td>');
+                    product_data.push('<td>' + value.price + '</td>');
+                    // product_data += '<td>' + value.id + '</td>';
+                    // product_data += '<td>' + value.url + '</td>';
+                    product_data.push('<td>' + value.description + '</td>');
+
+                    $('<button class="snipcart-add-item" data-item-id="' + value.id + '"  data-item-price="' + value.price + '"	data-item-url="' + value.url + '" data-item-description="' + value.description + '" data-item-image="' + value.image + '" data-item-name="' + value.name + '"> ' + value.name + ' </button>').insertAfter('.table-wrapper');
+
+
+                    // var $input = $('<input type="button" value="new button" />');
+                    // $input.appendTo($("table-wrapper"));
+                    // 				<button v-if="product.status === 'published'" class="snipcart-add-item" :data-item-id="product.id" :data-item-price="product.price"
+                    //     :data-item-url="`${storeUrl}${this.$route.fullPath}`" :data-item-description="product.description" :data-item-image="`${getStrapiMedia(product.image.formats.thumbnail.url)}`" :data-item-name="product.title" v-bind="customFields">
+                    //     Add to cart
+                    //   </button>
+                    // product_data += '<td>' + value.image + '</td>';
+                    product_data.push('</tr>');
+                });
+                $('#product_table').append(product_data);
+            });
+        });
+    </script>
+    <script src="https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="ZjJjNTljMmUtMDg1Yi00MGRhLWFhNDQtZWJjMjk2MjgwN2Y5NjM3MzQwNjE3NjM2MDI4NDM1"></div>
 
 </body>
 
